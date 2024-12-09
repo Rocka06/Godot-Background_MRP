@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://baipyay0l5nt6"]
+
+[ext_resource type="Texture2D" uid="uid://cipx3vy3s8nfe" path="res://icon.svg" id="1_m022l"]
+
+[sub_resource type="Environment" id="Environment_tu8aq"]
+background_mode = 3
+glow_enabled = true
+glow_levels/3 = 16.0
+glow_strength = 2.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_tu8aq")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+amount = 25
+lifetime = 5.0
+preprocess = 5.0
+emission_shape = 1
+emission_sphere_radius = 128.0
+gravity = Vector2(0, 0)
+orbit_velocity_min = -1.0
+orbit_velocity_max = 1.0
+color = Color(10, 10, 10, 1)
+
+[node name="Icon" type="Sprite2D" parent="."]
+z_index = -1
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_m022l")
